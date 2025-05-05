@@ -35,7 +35,7 @@
                 </div>
                 <div class="form-group">
                     <label for="photoUrl">Photo:</label>
-                    <input type="text" class="form-control" id="photo" placeholder="PhotoUrl" required>
+                    <input type="text" class="form-control" id="photoUrl" placeholder="PhotoUrl" required>
                 </div>
                 <button type="submit" class="btn btn-primary">Add Student</button>
             </form>
@@ -121,7 +121,7 @@
             $('#editStudentName').val(data.name);
             $('#editStudentBirthDate').val(data.birth_date);
             $('#editStudentCourse').val(data.course);
-            $('#editStudentPhotoUrl').val(data.photo);
+            $('#editStudentPhotoUrl').val(data.photo_url);
             $('#editStudentModal').modal('show');
         });
     }
@@ -201,7 +201,7 @@
             name: $('#name').val(),
             birth_date: $('#birth_date').val(),
             course: $('#course').val(),
-            photo_Url: $('#photoUrl').val(),
+            photo_url: $('#photoUrl').val(),
         };
         $.ajax({
             url: '/students',
